@@ -14,6 +14,6 @@ resource "azurerm_redis_cache" "test" {
 
   redis_configuration {
     maxmemory_policy   = "allkeys-random"
-    maxmemory_reserved = 3855
+    maxmemory_reserved = 755
   }
 }
