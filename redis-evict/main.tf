@@ -17,3 +17,12 @@ resource "azurerm_redis_cache" "test" {
     maxmemory_reserved = 755
   }
 }
+
+output "redis_host_name" {
+  value = azurerm_redis_cache.test.hostname
+}
+
+output "redis_access_key" {
+  sensitive = true
+  value     = azurerm_redis_cache.test.primary_access_key
+}
